@@ -1,0 +1,16 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "echo \"I am working...\""
+  },
+  "keywords": [
+    "None"
+  ],
+  "author": "sharath",
+  "license": "MIT"
+}
