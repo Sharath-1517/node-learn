@@ -1,13 +1,5 @@
 const os = require('os');
 
-function sayHello(name) {
-    console.log(`Hello ${name}`);
-}
-
-function printSum(num1, num2) {
-    console.log(num1 + num2);
-}
-
 function printSystemDetails() {
 
     const setUptime = os.uptime();
@@ -29,7 +21,5 @@ function printSystemDetails() {
 }
 
 module.exports = {
-    sayHello: sayHello,
-    printSum: printSum,
     deviceInfo: printSystemDetails
 };
