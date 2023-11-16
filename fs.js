@@ -1,13 +1,27 @@
 const fs = require('fs');
 
 function fsCreateDir() {
-  fs.mkdir('fs', (e) => {
+  fs.mkdir('./assets/fs', (e) => {
     if (e) {
       console.log(e);
     } else {
       console.log("Successfully created dir...");
     }
   });
+}
+
+function readDir(folderName="./assets") {
+  fs.readdir(folderName, (error, files) => {
+    if(error) console.log(error);
+    else console.log(files);
+  })
+}
+
+function deleteFile(filePath) {
+  fs.unlink(filePath, (error) => {
+    if(error) console.log(error);
+    else console.log("Deleted file successfully...");
+  })
 }
 
 function fsWriteFile(fileName, fileContent) {
@@ -30,5 +44,7 @@ function fsReadFile(fileName) {
 module.exports = {
   fsCreateDir: fsCreateDir,
   fsWriteFile: fsWriteFile,
-  fsReadFile: fsReadFile
+  fsReadFile: fsReadFile,
+  fsReadDir: readDir,
+  fsDeleteFile: deleteFile
 };
